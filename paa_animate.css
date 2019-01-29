@@ -1,0 +1,57 @@
+/*
+   New Perspectives on HTML and CSS, 7th Edition
+   Tutorial 8
+   Case Problem 3
+
+   Pixal Arts and Entertainment Animation Styles
+   Author: Trent Peterson
+      Date:   1.29.19 
+
+   Filename: 
+   
+   Sprite animation is created using the paa_bat.png, 
+   paa_bfly.png, and paa_fox.png image files.
+   
+   paa_bat.png has 40 frames
+   paa_bfly.png has 34 frames
+   paa_fox.png has 28 frames
+
+*/
+
+
+/* Transition Effects */
+/* This is all for the links. This changes the postition type as well as the color and makes it so all of the game links transition when you hover over them to a new color */
+nav#gameLinks a {
+    position: relative;
+    color: white;
+    transition: color .5s;
+}
+
+nav#gameLinks a:hover {
+    color: rgb(255, 194, 99);
+}
+
+/* This makes a bar underneath the links appear, it also positons it and gives it a height and border radius, it gives the bar a color gradient which is very cool, but this makes it so that you can't see the bar until you hover over the links. */
+nav#gameLinks a::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 0px;
+    width: 0%;
+    height: 8px;
+    background: linear-gradient(to right, rgb(237, 243, 71), rgb(188, 74, 0));
+    border-radius: 4px;
+    opacity: 0;
+}
+
+nav#gameLinks a:hover::after {
+    opacity: 1;
+    width: 100%;
+}
+
+/* Sprite Styles */
+
+
+
+
+/* Animation Styles */
